@@ -1,0 +1,133 @@
+{
+  "inputs": {
+    "_snowpack/env.js": {
+      "bytes": 97,
+      "imports": []
+    },
+    "_dist_/App.svelte.css": {
+      "bytes": 63,
+      "imports": []
+    },
+    "_snowpack/pkg/svelte/internal.js": {
+      "bytes": 9064,
+      "imports": []
+    },
+    "_snowpack/pkg/socket.io-client.js": {
+      "bytes": 178418,
+      "imports": []
+    },
+    "_dist_/MessageDisplay.svelte.css": {
+      "bytes": 135,
+      "imports": []
+    },
+    "_dist_/MessageDisplay.svelte.js": {
+      "bytes": 2073,
+      "imports": [
+        {
+          "path": "_dist_/MessageDisplay.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/App.svelte.js": {
+      "bytes": 5878,
+      "imports": [
+        {
+          "path": "_dist_/App.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/socket.io-client.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/MessageDisplay.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/styles/Tailwind.css": {
+      "bytes": 13839,
+      "imports": []
+    },
+    "_dist_/index.js": {
+      "bytes": 399,
+      "imports": [
+        {
+          "path": "_snowpack/env.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/App.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/styles/Tailwind.css",
+          "kind": "import-statement"
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "../~~bundle~~/_dist_/index.js": {
+      "imports": [],
+      "exports": [
+        "default"
+      ],
+      "entryPoint": "_dist_/index.js",
+      "inputs": {
+        "_snowpack/env.js": {
+          "bytesInOutput": 100
+        },
+        "_dist_/App.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/svelte/internal.js": {
+          "bytesInOutput": 3181
+        },
+        "_snowpack/pkg/socket.io-client.js": {
+          "bytesInOutput": 71587
+        },
+        "_dist_/MessageDisplay.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/MessageDisplay.svelte.js": {
+          "bytesInOutput": 752
+        },
+        "_dist_/App.svelte.js": {
+          "bytesInOutput": 2332
+        },
+        "_dist_/styles/Tailwind.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/index.js": {
+          "bytesInOutput": 139
+        }
+      },
+      "bytes": 78360
+    },
+    "../~~bundle~~/_dist_/index.css": {
+      "imports": [],
+      "inputs": {
+        "_dist_/styles/Tailwind.css": {
+          "bytesInOutput": 5661
+        },
+        "_dist_/App.svelte.css": {
+          "bytesInOutput": 63
+        },
+        "_dist_/MessageDisplay.svelte.css": {
+          "bytesInOutput": 135
+        }
+      },
+      "bytes": 5860
+    }
+  }
+}

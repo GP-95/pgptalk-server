@@ -1,0 +1,15 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "alwaysStrict": true,
+    "module": "ESNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "target": "ES2017",
+    "strict": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}
