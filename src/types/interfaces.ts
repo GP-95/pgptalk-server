@@ -5,7 +5,7 @@ export interface Message {
   username: string
   encrypted: boolean
   room: string
-  id: number
+  id: string
 }
 
 export interface ExtendedSocket extends Socket {

@@ -35,13 +35,12 @@ io.on('connection', (socket) => {
     const members = await socket.to(data.room_ID).allSockets()
     if (members.size < 2) {
       // Connects to slug based room
-      console.log('Joining: ' + data.room_ID)
       socket.join(data.room_ID)
     } else if (members.size >= 2) {
-      console.log('Redirecting to new room')
+      // Emits event to redirect to random room and reload on client side.
       socket.emit('roomFullRedirect')
     }
-    console.log(socket.rooms)
+
     // socket.room = data.room_ID
 
     // socket.to(socket.room).emit('message', {
