@@ -26,14 +26,15 @@ io.on('connection', (socket) => {
         // Checks room member count
         const members = await socket.to(data.room_ID).allSockets();
         if (members.size < 2) {
-            // todo
-            socket.join('someotherroom');
-            return;
-        }
-        else {
             // Connects to slug based room
+            console.log('Joining: ' + data.room_ID);
             socket.join(data.room_ID);
         }
+        else if (members.size >= 2) {
+            console.log('Redirecting to new room');
+            socket.emit('roomFullRedirect');
+        }
+        console.log(socket.rooms);
         // socket.room = data.room_ID
         // socket.to(socket.room).emit('message', {
         //   //Works, but send msg to everyone :(
@@ -65,6 +66,17 @@ io.on('connection', (socket) => {
     });
     // Listens for incoming messages
     socket.on('message', (data) => {
+        //Sends error message if user emits a message to a room which they are not in.
+        if (socket.rooms.values().next().value != data.room) {
+            socket.emit('message', {
+                username: 'Bot',
+                message: 'Message not sent, please close the tab.',
+                encrypted: false,
+                event: 'partner disconnected',
+                id: 5004,
+            });
+            return;
+        }
         io.to(data.room).emit('message', data);
     });
 });
