@@ -4,13 +4,91 @@
       "bytes": 97,
       "imports": []
     },
-    "_dist_/App.svelte.css": {
-      "bytes": 63,
+    "_snowpack/pkg/common/index-fab50a2e.js": {
+      "bytes": 14555,
       "imports": []
     },
     "_snowpack/pkg/svelte/internal.js": {
-      "bytes": 9064,
+      "bytes": 693,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-fab50a2e.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/common/index-a22c4f43.js": {
+      "bytes": 3291,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-fab50a2e.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/svelte-spa-router.js": {
+      "bytes": 27600,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-fab50a2e.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/common/index-a22c4f43.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/Chat.svelte.css": {
+      "bytes": 135,
       "imports": []
+    },
+    "_dist_/Switch.svelte.css": {
+      "bytes": 914,
+      "imports": []
+    },
+    "_dist_/Switch.svelte.js": {
+      "bytes": 3914,
+      "imports": [
+        {
+          "path": "_dist_/Switch.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/Modal.svelte.css": {
+      "bytes": 265,
+      "imports": []
+    },
+    "_dist_/Button.svelte.js": {
+      "bytes": 3183,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/Modal.svelte.js": {
+      "bytes": 4825,
+      "imports": [
+        {
+          "path": "_dist_/Modal.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Button.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
     },
     "_snowpack/pkg/socket.io-client.js": {
       "bytes": 178418,
@@ -20,8 +98,47 @@
       "bytes": 135,
       "imports": []
     },
+    "_dist_/utility/pgp.js": {
+      "bytes": 1470449,
+      "imports": []
+    },
+    "_dist_/utility/cryptions.js": {
+      "bytes": 1886,
+      "imports": [
+        {
+          "path": "_dist_/utility/pgp.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/pgp.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_snowpack/pkg/svelte/store.js": {
+      "bytes": 99,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/common/index-a22c4f43.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/common/index-fab50a2e.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/utility/store.js": {
+      "bytes": 203,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
     "_dist_/MessageDisplay.svelte.js": {
-      "bytes": 2073,
+      "bytes": 4305,
       "imports": [
         {
           "path": "_dist_/MessageDisplay.svelte.css",
@@ -30,18 +147,84 @@
         {
           "path": "_snowpack/pkg/svelte/internal.js",
           "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/cryptions.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/store.js",
+          "kind": "import-statement"
         }
       ]
     },
-    "_dist_/App.svelte.js": {
-      "bytes": 5878,
+    "_snowpack/pkg/cuid.js": {
+      "bytes": 3040,
+      "imports": []
+    },
+    "_dist_/PGPKeys.svelte.css": {
+      "bytes": 237,
+      "imports": []
+    },
+    "_dist_/PGPKeys.svelte.js": {
+      "bytes": 6124,
       "imports": [
         {
-          "path": "_dist_/App.svelte.css",
+          "path": "_dist_/PGPKeys.svelte.css",
           "kind": "import-statement"
         },
         {
           "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Button.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/store.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/pgp.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/PublicKey.svelte.js": {
+      "bytes": 2047,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/store.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/Chat.svelte.js": {
+      "bytes": 21918,
+      "imports": [
+        {
+          "path": "_dist_/Chat.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Switch.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Modal.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Button.svelte.js",
           "kind": "import-statement"
         },
         {
@@ -51,11 +234,77 @@
         {
           "path": "_dist_/MessageDisplay.svelte.js",
           "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/cuid.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/store.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/PGPKeys.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/PublicKey.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/utility/cryptions.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/Landing.svelte.css": {
+      "bytes": 363,
+      "imports": []
+    },
+    "_dist_/Landing.svelte.js": {
+      "bytes": 3681,
+      "imports": [
+        {
+          "path": "_dist_/Landing.svelte.css",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/cuid.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Button.svelte.js",
+          "kind": "import-statement"
+        }
+      ]
+    },
+    "_dist_/App.svelte.js": {
+      "bytes": 1124,
+      "imports": [
+        {
+          "path": "_snowpack/pkg/svelte/internal.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_snowpack/pkg/svelte-spa-router.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Chat.svelte.js",
+          "kind": "import-statement"
+        },
+        {
+          "path": "_dist_/Landing.svelte.js",
+          "kind": "import-statement"
         }
       ]
     },
     "_dist_/styles/Tailwind.css": {
-      "bytes": 13839,
+      "bytes": 18224,
       "imports": []
     },
     "_dist_/index.js": {
@@ -77,7 +326,7 @@
     }
   },
   "outputs": {
-    "../~~bundle~~/_dist_/index.js": {
+    "../../../svelteChat/~~bundle~~/_dist_/index.js": {
       "imports": [],
       "exports": [
         "default"
@@ -87,23 +336,80 @@
         "_snowpack/env.js": {
           "bytesInOutput": 100
         },
-        "_dist_/App.svelte.css": {
-          "bytesInOutput": 0
+        "_snowpack/pkg/common/index-fab50a2e.js": {
+          "bytesInOutput": 5016
         },
         "_snowpack/pkg/svelte/internal.js": {
-          "bytesInOutput": 3181
+          "bytesInOutput": 0
+        },
+        "_snowpack/pkg/common/index-a22c4f43.js": {
+          "bytesInOutput": 759
+        },
+        "_snowpack/pkg/svelte-spa-router.js": {
+          "bytesInOutput": 5237
+        },
+        "_dist_/Chat.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/Switch.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/Switch.svelte.js": {
+          "bytesInOutput": 1281
+        },
+        "_dist_/Modal.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/Button.svelte.js": {
+          "bytesInOutput": 1246
+        },
+        "_dist_/Modal.svelte.js": {
+          "bytesInOutput": 1540
         },
         "_snowpack/pkg/socket.io-client.js": {
-          "bytesInOutput": 71587
+          "bytesInOutput": 71983
         },
         "_dist_/MessageDisplay.svelte.css": {
           "bytesInOutput": 0
         },
+        "_dist_/utility/pgp.js": {
+          "bytesInOutput": 517299
+        },
+        "_dist_/utility/cryptions.js": {
+          "bytesInOutput": 813
+        },
+        "_snowpack/pkg/svelte/store.js": {
+          "bytesInOutput": 0
+        },
+        "_dist_/utility/store.js": {
+          "bytesInOutput": 71
+        },
         "_dist_/MessageDisplay.svelte.js": {
-          "bytesInOutput": 752
+          "bytesInOutput": 1674
+        },
+        "_snowpack/pkg/cuid.js": {
+          "bytesInOutput": 1134
+        },
+        "_dist_/PGPKeys.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/PGPKeys.svelte.js": {
+          "bytesInOutput": 2847
+        },
+        "_dist_/PublicKey.svelte.js": {
+          "bytesInOutput": 782
+        },
+        "_dist_/Chat.svelte.js": {
+          "bytesInOutput": 8061
+        },
+        "_dist_/Landing.svelte.css": {
+          "bytesInOutput": 0
+        },
+        "_dist_/Landing.svelte.js": {
+          "bytesInOutput": 1454
         },
         "_dist_/App.svelte.js": {
-          "bytesInOutput": 2332
+          "bytesInOutput": 294
         },
         "_dist_/styles/Tailwind.css": {
           "bytesInOutput": 0
@@ -112,22 +418,34 @@
           "bytesInOutput": 139
         }
       },
-      "bytes": 78360
+      "bytes": 623182
     },
-    "../~~bundle~~/_dist_/index.css": {
+    "../../../svelteChat/~~bundle~~/_dist_/index.css": {
       "imports": [],
       "inputs": {
         "_dist_/styles/Tailwind.css": {
-          "bytesInOutput": 5661
+          "bytesInOutput": 9242
         },
-        "_dist_/App.svelte.css": {
-          "bytesInOutput": 63
+        "_dist_/Chat.svelte.css": {
+          "bytesInOutput": 134
+        },
+        "_dist_/Landing.svelte.css": {
+          "bytesInOutput": 345
         },
         "_dist_/MessageDisplay.svelte.css": {
           "bytesInOutput": 135
+        },
+        "_dist_/Modal.svelte.css": {
+          "bytesInOutput": 259
+        },
+        "_dist_/PGPKeys.svelte.css": {
+          "bytesInOutput": 229
+        },
+        "_dist_/Switch.svelte.css": {
+          "bytesInOutput": 886
         }
       },
-      "bytes": 5860
+      "bytes": 11231
     }
   }
 }

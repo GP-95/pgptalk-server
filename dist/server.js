@@ -20,8 +20,53 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 // Socket
 io.on('connection', (socket) => {
-    console.log('New Socket connection');
-    socket.emit('message', { username: 'Bot', message: 'Connected!' });
+    socket.on('create_room', async (data) => {
+        // Leaves initial room
+        socket.leave(socket.id);
+        // Checks room member count
+        const members = await socket.to(data.room_ID).allSockets();
+        if (members.size < 2) {
+            // todo
+            socket.join('someotherroom');
+            return;
+        }
+        else {
+            // Connects to slug based room
+            socket.join(data.room_ID);
+        }
+        // socket.room = data.room_ID
+        // socket.to(socket.room).emit('message', {
+        //   //Works, but send msg to everyone :(
+        //   username: 'Bot',
+        //   message: 'A user has connected.',
+        //   encrypted: false,
+        //   event: 'partner connected',
+        //   id: 5002,
+        // })
+    });
+    // Confirmation message for self on successful connection
+    socket.emit('message', {
+        username: 'Bot',
+        message: 'Connected!',
+        encrypted: false,
+        id: 5001,
+        event: 'connected',
+    });
+    // Sends message to partner on user disconnect
+    socket.on('disconnecting', () => {
+        const room = socket.rooms.values().next().value;
+        io.to(room).emit('message', {
+            username: 'Bot',
+            message: 'A user has disconnected.',
+            encrypted: false,
+            event: 'partner disconnected',
+            id: 5003,
+        });
+    });
+    // Listens for incoming messages
+    socket.on('message', (data) => {
+        io.to(data.room).emit('message', data);
+    });
 });
 // Server listening
 server.listen(process.env.PORT, () => {

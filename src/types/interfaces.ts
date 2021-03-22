@@ -1,4 +1,13 @@
+import { Socket } from 'socket.io'
+
 export interface Message {
-  username: string
   message: string
+  username: string
+  encrypted: boolean
+  room: string
+  id: number
+}
+
+export interface ExtendedSocket extends Socket {
+  room: string
 }
