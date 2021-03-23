@@ -78,7 +78,7 @@ io.on('connection', (socket) => {
     // Get room member count and emit
     const roomMembers: any = io.sockets.adapter.rooms.get(room)?.size
 
-    io.to(room).emit('changeCount', { count: roomMembers })
+    io.to(room).emit('changeCount', { count: roomMembers - 1 })
   })
 
   // Listens for incoming messages
