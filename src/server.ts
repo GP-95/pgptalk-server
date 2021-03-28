@@ -2,7 +2,6 @@ import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
 import { Server } from 'socket.io'
-import cors from 'cors'
 import { fileURLToPath } from 'url'
 import http from 'http'
 import { Message } from './types/interfaces'
@@ -41,6 +40,7 @@ io.on('connection', (socket) => {
         username: data.username,
         message: 'A user has connected.',
         encrypted: false,
+        verified: true,
         event: 'partner connected',
         id: 5002,
       })
@@ -59,6 +59,7 @@ io.on('connection', (socket) => {
     username: 'Bot',
     message: 'Connected!',
     encrypted: false,
+    verified: true,
     id: 5001,
     event: 'connected',
   })
